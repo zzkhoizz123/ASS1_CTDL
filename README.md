@@ -169,7 +169,9 @@ trong đó **event.txt** là file chứa danh sách các sự kiện, cách nhau
 bởi khoảng trắng hoặc ký tự xuống dòng.
 
 `data.csv` là tập tin chứa dữ liệu của ninja, sinh viên có thể 
-thử nghiệm với các tâp tin dữ liệu khác nhau. 
+thử nghiệm với các tâp tin dữ liệu khác nhau. Sinh viên 
+lấy data mẫu từ đây: 
+`https://drive.google.com/a/hcmut.edu.vn/file/d/0B0HOddIgwPEAMDRDWThPTmVJeTg/view?usp=sharing`
 
 Đối với các bạn dùng VisualStudio (VS) trên Windows, các bạn có thể tạo một 
 project và tự thêm các file mã nguồn vào. Nếu không bạn có thể sử dụng hệ 
