@@ -75,11 +75,7 @@ bool processEvent(ninjaEvent_t& event, L1List<NinjaInfo_t>& nList, void* pGData)
 void process(L1List<ninjaEvent_t>& eventList, L1List<NinjaInfo_t>& nList);
 
 /// NOTE: student may create this function to allocate some global data
-bool initBusGlobalData(void** pGData);
-/// NOTE: student must defined this function if they use dynamically allocated global data.
-/// If student do not use any dynamic global data, please define this function as empty function
-/// in your code (file processData.cpp) as follows
-/// void releaseBusGlobalData() {}
-void releaseBusGlobalData(void* pGData);
+bool initNinjaGlobalData(void** pGData);
+void releaseNinjaGlobalData(void* pGData);
 
 #endif //A01_DBLIB_H

@@ -40,7 +40,7 @@ bool parseNinjaInfo(char* pBuf, NinjaInfo_t& nInfo) {
 
 void process(L1List<ninjaEvent_t>& eventList, L1List<NinjaInfo_t>& bList) {
     void*   pGData = NULL;
-    initBusGlobalData(&pGData);
+    initNinjaGlobalData(&pGData);
 
     while (!eventList.isEmpty()) {
         if(!processEvent(eventList[0], bList, pGData))
@@ -48,17 +48,17 @@ void process(L1List<ninjaEvent_t>& eventList, L1List<NinjaInfo_t>& bList) {
         eventList.removeHead();
     }
 
-    releaseBusGlobalData(pGData);
+    releaseNinjaGlobalData(pGData);
 }
 
 
-bool initBusGlobalData(void** pGData) {
+bool initNinjaGlobalData(void** pGData) {
     /// TODO: You should define this function if you would like to use some extra data
     /// the data should be allocated and pass the address into pGData
     return true;
 }
 
-void releaseBusGlobalData(void* pGData) {
+void releaseNinjaGlobalData(void* pGData) {
     /// TODO: You should define this function if you allocated extra data at initialization stage
     /// The data pointed by pGData should be released
 }
