@@ -39,12 +39,30 @@ bool parseNinjaInfo(char* pBuf, NinjaInfo_t& nInfo) {
 
 
 void process(L1List<ninjaEvent_t>& eventList, L1List<NinjaInfo_t>& bList) {
+    void*   pGData = NULL;
+    initBusGlobalData(&pGData);
+
     while (!eventList.isEmpty()) {
-        if(!processEvent(eventList[0], bList))
+        if(!processEvent(eventList[0], bList, pGData))
             cout << eventList[0].code << " is an invalid event\n";
         eventList.removeHead();
     }
+
+    releaseBusGlobalData(pGData);
 }
+
+
+bool initBusGlobalData(void** pGData) {
+    /// TODO: You should define this function if you would like to use some extra data
+    /// the data should be allocated and pass the address into pGData
+    return true;
+}
+
+void releaseBusGlobalData(void* pGData) {
+    /// TODO: You should define this function if you allocated extra data at initialization stage
+    /// The data pointed by pGData should be released
+}
+
 
 void printNinjaInfo(NinjaInfo_t& b) {
     printf("%s: (%0.5f, %0.5f), %s\n", b.id, b.longitude, b.latitude, ctime(&b.timestamp));

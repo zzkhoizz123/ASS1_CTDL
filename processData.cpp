@@ -7,7 +7,7 @@
 #include "eventLib.h"
 #include "dbLib.h"
 
-bool processEvent(ninjaEvent_t& event, L1List<NinjaInfo_t>& nList) {
+bool processEvent(ninjaEvent_t& event, L1List<NinjaInfo_t>& nList, void* pGData) {
     // TODO: Your code comes here
 
     /// NOTE: The output of the event will be printed on one line
